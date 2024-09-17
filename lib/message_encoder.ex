@@ -4,7 +4,7 @@ defmodule MessageEncoder do
   def letter_position do
     @alphabet
     |> Enum.to_list()
-    |> Enum.map(fn letter -> {<<letter::utf8>> , letter - ?a + 1} end)
+    |> Enum.map(fn letter -> {<<letter>> , letter - ?a + 1} end)
     |> Enum.into(%{})
   end
 
